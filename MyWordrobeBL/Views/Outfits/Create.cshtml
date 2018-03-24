@@ -1,19 +1,36 @@
 ﻿@model MyWordrobeBL.Models.Outfit
-
+<link href="~/Content/OutfitStyle.css" rel="stylesheet" />
+<script src="~/Scripts/OutfitsJS.js"></script>
 @{
     ViewBag.Title = "Create";
 }
 
 <h2>Create</h2>
 
+<!-- Trigger/Open The Modal -->
+<button id="myBtn">Open Modal</button>
 
-@using (Html.BeginForm()) 
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>Some text in the Modal..</p>
+    </div>
+
+</div>
+
+
+@using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-    
+
     <div class="form-horizontal">
         <h4>Outfit</h4>
+
         <hr />
+
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div class="form-group">
             @Html.LabelFor(model => model.TopsID, "TopsID", htmlAttributes: new { @class = "control-label col-md-2" })
@@ -55,16 +72,17 @@
     </div>
 }
 
-    <div>
-        <div class="col-lg-4 last">
-            <a href="~/Outfits/Index">
-                <img src="~/Content/iconeOtherpics/icons8-back-arrow-64.png" />    <p>got back</p>
-                                                                            
-            </a>
+<div>
+    <div class="col-lg-4 last">
+        <a href="~/Outfits/Index">
+            <img src="~/Content/iconeOtherpics/icons8-back-arrow-64.png" />    <p>got back</p>
 
-        </div>
-       
+        </a>
+
     </div>
+
+</div>
+
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
