@@ -69,10 +69,10 @@ function Search() {
         //If user enters Tops thsn...
         if (txt == 'Tops') {
             //store url into w variable
+            
             var w = 'Tops/Index';
             //go to the Tops index page...stored as w
             window.location = w;
-
         }
         //if user types in Pnats
         else if (txt == 'Pants') {
@@ -141,3 +141,26 @@ function searchandDelete() {
         }
     }
 
+//Review function....takes in review and gives back whatever the user wrote
+function Review() {
+    var x = document.getElementById("TextArea").value;
+    document.getElementById("rev").innerHTML = x;
+}
+
+//on mouse over chage background color and font color
+function overBtn(x) {
+    x.style.backgroundColor = "white";
+    x.style.color = "black";
+}
+
+//on mouse off revret back 
+function outBtn(x) {
+    x.style.backgroundColor = "#474e5d";
+    x.style.color = "white";
+}
+
+
+//redirection function to another site
+function Redirect() {
+    confirm('You are being redirected.');
+}

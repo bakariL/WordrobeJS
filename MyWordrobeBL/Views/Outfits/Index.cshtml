@@ -1,4 +1,5 @@
 ﻿<link href="~/Content/OutfitStyle.css" rel="stylesheet" />
+<script src="~/Scripts/HomeMain.js"></script>
 <script src="~/Scripts/OutfitsJS.js"></script>
 @model IEnumerable<MyWordrobeBL.Models.Outfit>
 
@@ -8,7 +9,6 @@
 <div class="row">
     <div class="col-lg-4">
         <a href="~/Home/Index"> <img src="~/Content/iconeOtherpics/icons8-back-arrow-64.png" /> <P>go back</P></a>
-       
     </div>
     <div class="col-lg-4">
         <h2>outfits</h2>
@@ -17,11 +17,23 @@
         <a href="~/Outfits/Create">
             <img src="~/Content/iconeOtherpics/icons8-add-64.png" />    <p>add new outfit</p>
         </a>
-        
+
     </div>
 </div>
+<div class="row" style="display:flex;" id="btnF" onclick="Swap('btnF', 'formM')">
+    <button class="btn" onmouseover="overBtn(this)" onmouseout="outBtn(this)">Review</button>
+</div>
+<div class="row" style="display:none;" id="formM">
+    Write Review<br>
+    <textarea id="TextArea">
+    </textarea>
+    <button type="button" class="btn" onmouseover="overBtn(this)" onmouseout="outBtn(this)"  onclick="Review()">Submit</button>
+
+</div>
+<p id="rev"></p>
 
 
+<br />
 <div class="row">
     @foreach (var item in Model)
     {
@@ -30,7 +42,9 @@
             <div class="thumbnail thumb">
                 <div class="outfitHeader">
                     <h4>my outfit</h4>
+
                     <hr />
+
                 </div>
                 <p>
                     <img src=" @Html.DisplayFor(modelItem => item.Top.Photo.Photo1)" width="100" height="100" />

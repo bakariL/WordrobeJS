@@ -249,6 +249,7 @@
     <Content Include="Content\iconeOtherpics\icons8-watches-front-view-80.png" />
     <Content Include="Content\indexStyle.css" />
     <Content Include="Content\OutfitStyle.css" />
+    <Content Include="Content\README.css" />
     <Content Include="Content\shoeImages\dresShoe.jpg" />
     <Content Include="Content\shoeImages\max95.jpg" />
     <Content Include="Content\ShoesDetStyle.css" />

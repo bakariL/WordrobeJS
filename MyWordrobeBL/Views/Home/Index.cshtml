@@ -1,8 +1,9 @@
 ﻿<link href="~/Content/HomeStyle.css" rel="stylesheet" />
-
+<script src="~/Scripts/HomeMain.js"></script>
 @{
     ViewBag.Title = "Home Page";
 }
+
 <!--login in sign up words here...top of page-->
 <div class="row LoginSignUp" id="firstLoginSignUp">
     <div class="col-md-12">
@@ -11,14 +12,14 @@
 </div>
 
 <!--first hidden...login form...email and pw required....-->
-<div class="row loginSignupRow"  style="display: none" id="loginForm">
+<div class="row loginSignupRow" style="display: none" id="loginForm">
     <div class="col-md-8"></div>
     <div class="col-md-4 loginBlock">
         <form action="/action_page.php">
             <input type="email" name="email" value="email">
             <input type="password" name="password" value="password">
             <br><br>
-            <button type="button"  class="btn" onclick="DisplayUser('loginForm', 'LoggedIn')">Submit</button>
+            <button type="button" class="btn" onclick="DisplayUser('loginForm', 'LoggedIn')">Submit</button>
         </form>
     </div>
 </div>
@@ -42,8 +43,12 @@
         <h1>My Wordrobe </h1>
         <h3>Your virtual closest</h3>
         <p>Create, Update, and See your wordrobe!</p>
+        <p><a href="https://www.uniqlo.com" target="_blank" onclick="Redirect();">Click here</a> to check out more sites </p>
     </div>
 </div>
+ 
+
+
 <div class="row">
     <div class="col-lg-4">
         <div class="beginBtn">
@@ -51,9 +56,10 @@
         </div>
     </div>
     <div class="col-lg-4">
-        <div class="beginBtn">
-            <a href="~/Outfits/Index" class="btn-2 zoom" type="button" id="button"> <span id="create"> See</span> Outfits&raquo;</a>
-        </div>
+
+        <input type="text" name="txt" id="txt" />
+        <button onclick="Search();">Search</button>
+        <p id="pgh"></p>
     </div>
     <div class="col-lg-4">
         <div class="beginBtn">

@@ -1,1 +1,39 @@
-﻿
+﻿footer {
+    margin-top: 50em;
+    position: fixed;
+    width: 100%
+}
+
+ul a {
+    padding: 3em;
+    text-align: center;
+}
+
+.navbar {
+    display: flex;
+    background-color: #e8e3e3;
+    color: #4e4e4e;
+}
+
+li {
+    list-style-type: none;
+    text-decoration: none;
+    align-items: center;
+}
+
+    li a:hover {
+        list-style-type: none;
+        text-decoration: none;
+    }
+
+ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 22em;
+}
+
+#foot {
+    padding: 1em;
+    margin-left: 11em;
+}

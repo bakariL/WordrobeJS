@@ -11,27 +11,13 @@
 
 </head>
 <body>
-    <input type="text" name="txt" id="txt" />
-    <button onclick="Search(); Redirect();">Search</button>
-    <button onclick="addElement();">add</button>
-    <button onclick="searchandDelete();">deleete</button>
 
-    <p id="pgh"></p>
 
     @RenderBody()
     <footer>
-        <div class="nav navbar">
-            <ul id="myUL">
-                <li><a href="~/Home/Index">home</a></li>
-                <li><a href="~/Tops/Index">tops</a></li>
-                <li><a href="~/Bottoms/Index">bottoms</a></li>
-                <li><a href="~/Shoes/Index">shoes</a></li>
-                <li><a href="~/Accesories/Index">accessories</a></li>
-                <li><a href="~/Outfits/Index">outfits</a></li>
-            </ul>
-
+   
             <p id="foot">&copy; @DateTime.Now.Year - My Wordrobe Application</p>
-        </div>
+        
 
     </footer>
 
