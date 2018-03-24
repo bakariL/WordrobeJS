@@ -1,4 +1,19 @@
-﻿
+﻿/*thumbnail style here*/
 .thumb{
     text-align:center;
 }
+/* content in the thumbnails*/
+.contentInDiv{
+    display: flex;
+    justify-content:center;
+}
+.droptarget {
+    float: left;
+    width: 100px;
+    height: 35px;
+    margin: 15px;
+    padding: 10px;
+    border: 1px solid #aaaaaa;
+}
+
+/*options menu to select color*/

@@ -1,38 +1,71 @@
 ﻿<link href="~/Content/TopsInstyle.css" rel="stylesheet" />
-
+<script src="~/Scripts/TopsJS.js"></script>
 @model IEnumerable<MyWordrobeBL.Models.Top>
 
 @{
     ViewBag.Title = "Index";
 }
-
+<!--top with back arrow-->
 <div class="row">
     <div class="col-lg-4">
         <a href="~/Home/Index"> <img src="~/Content/iconeOtherpics/icons8-back-arrow-64.png" /> <P>go back</P></a>
+    </div>
 
-    </div>
     <div class="col-lg-4">
-        <h2>tops</h2>
+        <!--Header "Tops"-->
+        <h1>tops</h1>
     </div>
+
     <div class="col-lg-4 last">
+        <!--Create new Top item-->
         <a href="~/Tops/Create">
             <img src="~/Content/iconeOtherpics/icons8-add-64.png" />    <p>add new top</p>
         </a>
-
     </div>
 </div>
+<!--for each item make a thumbnail for it....thumbnail below here..-->
 <div class="row">
     @foreach (var item in Model)
     {
     <div class="col-lg-4">
-        <div class="thumbnail img-thumbnail">
+        <div class="thumbnail img-thumbnail contentInDiv">
+            <!--Item name and pic-->
+            <img src="@Html.DisplayFor(modelItem => item.Photo.Photo1)" ondrop="drop(event)" ondragover="allowDrop(event)" width="200" height="200" style="display:flex" />
 
-            <p>@Html.DisplayFor(modelItem => item.Name)</p>
-            <img src="@Html.DisplayFor(modelItem => item.Photo.Photo1)" width="200" height="200" />
+            <!--User can personalize there shirt by putting thir name or typing something in and then dragging it onto the shirt to preview it....having some trouble-->
+            <div>
+                <h3>@Html.DisplayFor(modelItem => item.Name)</h3>
+                <p>type your name</p>
+                <input class="droptarget" ondrop="drop(event)" ondragover="allowDrop(event)" type="text" ondragstart="dragStart(event)" ondrag="dragging(event)" draggable="true" id="dragtarget" />
 
-            @Html.ActionLink("Edit", "Edit", new { id = item.TopsID }) |
-            @Html.ActionLink("Details", "Details", new { id = item.TopsID }) |
-            @Html.ActionLink("Delete", "Delete", new { id = item.TopsID })
+
+                <!--Edit, details, delete links options -->
+                <div>
+                    <span>Color: </span><select id="mySelect" onchange="myFunction()">
+                        <option>Red</option>
+                        <option>Black</option>
+                        <option>White</option>
+                    </select>
+                </div>
+                <!--Edit, details, delete links options -->
+                <div>
+                    <span>Size: </span><select id="mySelect" onchange="myFunction()">
+                        <option>Small</option>
+                        <option>Mediem</option>
+                        <option>Large</option>
+                    </select>
+                </div>
+
+                <div>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.TopsID })
+                    @Html.ActionLink("Details", "Details", new { id = item.TopsID })
+                    @Html.ActionLink("Delete", "Delete", new { id = item.TopsID })
+                </div>
+                <div>
+                    <button onclick="myFunction()">Try it</button>
+                </div>
+            </div>
+
         </div>
     </div>
     }

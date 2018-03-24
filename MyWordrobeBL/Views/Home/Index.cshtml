@@ -3,11 +3,46 @@
 @{
     ViewBag.Title = "Home Page";
 }
+<!--login in sign up words here...top of page-->
+<div class="row LoginSignUp" id="firstLoginSignUp">
+    <div class="col-md-12">
+        <p id="sgnuplogn"><button onmouseover="mouseon(this)" onmouseout="mouseoff(this)" onclick="Swap('firstLoginSignUp','loginForm')"> Login</button> or <a onmouseover="mouseon(this)" onmouseout="mouseoff(this)" onclick="SwapSignUp">sign up</a></p>
+    </div>
+</div>
 
-<div class="topHead">
-    <h1>My Wordrobe </h1>
-    <h3>Your virtual closest</h3>
-    <p>Create, Update, and See your wordrobe!</p>
+<!--first hidden...login form...email and pw required....-->
+<div class="row loginSignupRow"  style="display: none" id="loginForm">
+    <div class="col-md-8"></div>
+    <div class="col-md-4 loginBlock">
+        <form action="/action_page.php">
+            <input type="email" name="email" value="email">
+            <input type="password" name="password" value="password">
+            <br><br>
+            <button type="button"  class="btn" onclick="DisplayUser('loginForm', 'LoggedIn')">Submit</button>
+        </form>
+    </div>
+</div>
+
+<!--after user enters info...LOGGED IN STATUS..show users name or email while logged in-->
+<div class="row" id="LoggedIn" style="display:none;">
+    <div class="col-md-12">
+        <p id="loginName"></p>
+    </div>
+</div>
+
+
+<div class="row loginSignupRow" style="display: none" id="signUpForm">
+
+</div>
+
+
+<div class="row">
+    <div class="topHead">
+
+        <h1>My Wordrobe </h1>
+        <h3>Your virtual closest</h3>
+        <p>Create, Update, and See your wordrobe!</p>
+    </div>
 </div>
 <div class="row">
     <div class="col-lg-4">

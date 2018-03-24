@@ -1,4 +1,4 @@
-﻿
+﻿/*body styling here*/
 
 body {
     padding: 0;
@@ -12,14 +12,16 @@ body {
 h1{
     font-size:60px
 }
+
+/*header content here*/
 .topHead{
 
     text-align: center;
-    margin-top: 10em;
+    margin-top: 5em;
     
 }
 
-
+/*footer styling here*/
 footer {
     margin-top: 19em;
     font-family: 'Lato', sans-serif;
@@ -32,6 +34,7 @@ footer {
     margin-top: 5em;
     text-align: center;
 }
+
 
 
 #create {
@@ -111,6 +114,52 @@ footer {
         transform: translateZ(10px);
     }
 
+
+    /*login divs below...quite a few*/
 h1 {
     margin: 0;
+}
+
+.login {
+    color: #00B2FF;
+    float: right;
+    padding-right: 1em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    background-color: rebeccapurple;
+}
+form{
+    display:flex;
+    margin-right: 10em;
+    padding-right:1em;
+}
+
+
+.loginBlock {
+    height: auto;
+    padding-left: 18em;
+    padding-right: 1em;
+    padding-top: 2em;
+}
+
+.loginSignupRow {
+
+    margin-right: 4em;
+}
+
+
+#loginName {
+
+    float: right;
+    padding-right: 5em;
+    padding-top: 1em;
+}
+
+
+
+.LoginSignUp {
+    float: right;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    padding-right: 5em;
 }

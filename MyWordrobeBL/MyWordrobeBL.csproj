@@ -253,10 +253,13 @@
     <Content Include="Content\shoeImages\max95.jpg" />
     <Content Include="Content\ShoesDetStyle.css" />
     <Content Include="Content\ShoesInStyle.css" />
+    <Content Include="Content\topImages\blk shirt.jpg" />
     <Content Include="Content\topImages\blueHood.jpg" />
     <Content Include="Content\topImages\dresshrit.jpg" />
     <Content Include="Content\topImages\NikeHodBLK.jpg" />
     <Content Include="Content\topImages\RedHoodieNi.jpg" />
+    <Content Include="Content\topImages\redShirt.jpg" />
+    <Content Include="Content\topImages\white shirt.jpg" />
     <Content Include="Content\TopsDetstyle.css" />
     <Content Include="Content\TopsInstyle.css" />
     <Content Include="Content\Top_Shoe_Buttom_accorsStyle.css" />
@@ -295,6 +298,7 @@
       <DependentUpon>WordrobeBL.edmx</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
+    <Content Include="Scripts\HomeMain.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
     <Content Include="Scripts\jquery-3.3.1.slim.js" />
@@ -309,6 +313,7 @@
     <Content Include="Scripts\respond.matchmedia.addListener.js" />
     <Content Include="Scripts\respond.matchmedia.addListener.min.js" />
     <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\TopsJS.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

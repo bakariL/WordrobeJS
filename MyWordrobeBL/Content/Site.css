@@ -1,6 +1,7 @@
 ﻿body {
     padding: .5em;
     font-family: 'Montserrat', sans-serif;
+    width: 100vw; 
 }
 
 /* Set padding to keep content from hitting the edges */
