@@ -238,7 +238,9 @@
     <Content Include="Content\iconeOtherpics\icons8-add-96.png" />
     <Content Include="Content\iconeOtherpics\icons8-back-arrow-64.png" />
     <Content Include="Content\iconeOtherpics\icons8-back-arrow-96.png" />
+    <Content Include="Content\iconeOtherpics\icons8-checked-48.png" />
     <Content Include="Content\iconeOtherpics\icons8-chevron-right-100.png" />
+    <Content Include="Content\iconeOtherpics\icons8-delete-48.png" />
     <Content Include="Content\iconeOtherpics\icons8-edit-48.png" />
     <Content Include="Content\iconeOtherpics\icons8-info-48.png" />
     <Content Include="Content\iconeOtherpics\icons8-jeans-96.png" />

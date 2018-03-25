@@ -1,1 +1,18 @@
 ﻿
+input:invalid ~ span:after {
+    content: url('iconeOtherpics/icons8-delete-48.png');
+    padding-left: 5px;
+    position: absolute;
+}
+
+input:valid ~ span:after {
+    content: url('iconeOtherpics/icons8-checked-48.png');
+    padding-left: 5px;
+    position: absolute;
+}
+
+
+
+input{
+    margin-right: 10px;
+}

@@ -14,14 +14,17 @@ function Swap(div1, div2) {
 
 
 //displays users name when LOGGED IN on submit
-function DisplayUser(div1, div2) {
+function DisplayUser(div1, div2)
+{
     // var d1, goes to the DOC and get the div element that was passed through at sets it to d1 and d2. 
     d1 = document.getElementById(div1);
     d2 = document.getElementById(div2);
+
     //if the 2nd div passed through is diplay none is true...then, change d2 to display flex and d1 to display none....else do the opposite. 
     if (d2.style.display == "none") {
         d1.style.display = "none";
         d2.style.display = "flex";
+
         //calling function below. to show user name when logged in. 
         LName(d2);
     }
@@ -34,20 +37,23 @@ function DisplayUser(div1, div2) {
 
 
 //function to get the logged in Name. and set the inner text
-function LName(name) {
+function LName(name)
+{
     //goes to the DOC and get the "loginName" element by ID and sets the text to Welcome username.
     name = document.getElementById('loginName').innerText = 'Welcome' + name;
 }
 
 //on mouseover change color
-function omouseon(x) {
+function omouseon(x)
+{
     x.style.backgroundColor = "white";
     x.style.color = "black";
 }
 
 
 //on mouse off change color
-function mouseoff(x) {
+function mouseoff(x)
+{
     x.style.backgroundColor = "#474e5d";
     x.style.color = "white";
 }
@@ -57,32 +63,38 @@ function mouseoff(x) {
 //search function 
 function Search() {
     //creates and populates array
-    var myArr = ["Tops", "Bottoms", "Accessories", "Shoes"];
+    var myArr = ["tops", "bottoms", "accessories", "shoes"];
+
     //goes into document. get the 'pgh' p element by ID and sets the inner HTML to the display all the list of items in array
     document.getElementById('pgh').innerHTML = myArr;
+
     //creates a variable sets it euqaul to the value typed in the input box, grabs input box by ID
     var txt = document.getElementById('txt').value;
+
     //creates another variable that stores the txt as a index spot in the array
     var index = myArr.indexOf(txt);
+
     //if the index is NOT eqaul than index spot -1 then its a match!
     if (index !== -1) {
+
         //If user enters Tops thsn...
-        if (txt == 'Tops') {
-            //store url into w variable
-            
+        if (txt == 'tops') {
+
+            //store url into w variable 
             var w = 'Tops/Index';
             //go to the Tops index page...stored as w
             window.location = w;
+            
         }
         //if user types in Pnats
-        else if (txt == 'Pants') {
+        else if (txt == 'pants') {
 
             //go to pants index page
             var w = 'Bottoms/Index';
             window.location = w;
         }
             //if user types in Shoes
-        else if (txt == 'Shoes') {
+        else if (txt == 'shoes') {
 
             //go to Shoes index page
             var w = 'Shoes/Index';
@@ -90,13 +102,15 @@ function Search() {
         }
 
             //if user txt is Accesories
-        else if (txt == 'Accesories') {
+        else if (txt == 'accesories')
+        {
             //go to Accesories page
             var w = 'Accesories/Index';
             window.location = w;
         }
             //if none, try again
-        else {
+        else
+        {
             alert('try again');
         }
     }
@@ -109,22 +123,28 @@ function Search() {
 
 
 //add element function 
-function addElement() {
+function addElement()
+{
     var myArr = ["Tops", "Pants", "Accessories", "Shoes"];
     //creates txt variable, goes to document, gets the txt element byID and changes the value
     var txt = document.getElementById('txt').value;
+
     //adds or pushes this item to the beginning of array...top down..pancake style
     myArr.push(txt);
+
     //this displays it
     document.getElementById('pgh').innerHTML = myArr;
 }
 
 //search and replace/delete
-function searchandDelete() {
+function searchandDelete()
+{
     //creates array
     var myArr = ["Tops", "Pants", "Accessories"];
+
     //goes to the 'txt' input id element
     var txt = document.getElementById('txt').value;
+
     //passes the input element in the array though the method 'indexOf' 
     var index = myArr.indexOf(txt);
 
@@ -147,20 +167,41 @@ function Review() {
     document.getElementById("rev").innerHTML = x;
 }
 
+//Filter function. craetes array. elements must pass the test from the function. 
+//filter() calls a procided callback dunrion once for each element in an array, and constricts a new array of all the values for which callback returns a value that coerces to true
+function TheFilter(list)
+{
+    return list == 'Air Max';
+    //not working...
+}
+
 //on mouse over chage background color and font color
-function overBtn(x) {
+function overBtn(x)
+{
     x.style.backgroundColor = "white";
     x.style.color = "black";
 }
 
 //on mouse off revret back 
-function outBtn(x) {
+function outBtn(x)
+{
     x.style.backgroundColor = "#474e5d";
     x.style.color = "white";
 }
 
 
 //redirection function to another site
-function Redirect() {
+function Redirect()
+{
     confirm('You are being redirected.');
+}
+
+//foot function to change text to name
+function Footer()
+{
+    var ftr = document.getElementById("foo").innerHTML;
+    var nme = ftr.replace("My Wordrobe Application", "Created by Bakari Lewis")
+    document.getElementById("foo").innerHTML = nme;
+
+
 }

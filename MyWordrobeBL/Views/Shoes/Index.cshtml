@@ -1,4 +1,6 @@
-﻿@model IEnumerable<MyWordrobeBL.Models.Sho>
+﻿<link href="~/Content/ShoesInStyle.css" rel="stylesheet" />
+
+@model IEnumerable<MyWordrobeBL.Models.Sho>
 
 @{
     ViewBag.Title = "Index";
@@ -10,7 +12,7 @@
 
     </div>
     <div class="col-lg-4">
-        <h2>shots</h2>
+        <h1>shoes</h1>
     </div>
     <div class="col-lg-4 last">
         <a href="~/Shoes/Create">
@@ -18,24 +20,34 @@
         </a>
 
     </div>
+    <!--another search bar using filter...with placeholder text, used required just to try it-->
+    <!--when you start typing the x chages to a check mark-->
+    <form role="search">
+        <div>
+            <input type="search" id="userSearch" name="searchBar" placeholder="Search your shoes..." size="50" required/>
+            <button>search</button>
+            <span class="validity"></span>
+        </div>
+    </form>
+
 </div>
 <div class="row">
     @foreach (var item in Model)
     {
-    <div class="col-lg-pull-4">
-        <div class="img-thumbnail">
+        <div class="col-lg-pull-4">
+            <div class="img-thumbnail">
 
 
-            <img src="@Html.DisplayFor(modelItem => item.Photo.Photo1)" width="200" height="200" />
-            <p>
-                @Html.ActionLink("Edit", "Edit", new { id = item.ShoesID })
-                @Html.ActionLink("Details", "Details", new { id = item.ShoesID })
-                @Html.ActionLink("Delete", "Delete", new { id = item.ShoesID })
-            </p>
+                <img src="@Html.DisplayFor(modelItem => item.Photo.Photo1)" width="200" height="200" />
+                <p>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.ShoesID })
+                    @Html.ActionLink("Details", "Details", new { id = item.ShoesID })
+                    @Html.ActionLink("Delete", "Delete", new { id = item.ShoesID })
+                </p>
+            </div>
         </div>
-    </div>
     }
-    </div>
+</div>
 
 </a>
 

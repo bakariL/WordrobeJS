@@ -24,44 +24,42 @@
     </div>
 </div>
 
-<!--after user enters info...LOGGED IN STATUS..show users name or email while logged in-->
+<!--after user enters info...LOGGED IN STATUS..show users name or email while logged in, adding content switching divs-->
 <div class="row" id="LoggedIn" style="display:none;">
     <div class="col-md-12">
         <p id="loginName"></p>
     </div>
 </div>
-
-
 <div class="row loginSignupRow" style="display: none" id="signUpForm">
-
 </div>
-
 
 <div class="row">
     <div class="topHead">
-
+        <!--Header-->
         <h1>My Wordrobe </h1>
         <h3>Your virtual closest</h3>
         <p>Create, Update, and See your wordrobe!</p>
+        <!--redirect section to another tab-->
         <p><a href="https://www.uniqlo.com" target="_blank" onclick="Redirect();">Click here</a> to check out more sites </p>
     </div>
 </div>
- 
-
 
 <div class="row">
+    <!--go to outfits index page-->
     <div class="col-lg-4">
         <div class="beginBtn">
             <a href="~/Outfits/Create" class="btn-2 zoom" type="button" id="button"> <span id="create">Create </span> Outfit&raquo;</a>
         </div>
     </div>
-    <div class="col-lg-4">
-
+    <div class="col-lg-4 sr">
+        <!--Search Box-->
+        <h4><strong>Search</strong> for Tops, Bottoms, Shoes</h4>
         <input type="text" name="txt" id="txt" />
         <button onclick="Search();">Search</button>
         <p id="pgh"></p>
     </div>
     <div class="col-lg-4">
+         <!--go to add item page, i just have it under the about page didnt update the name-->
         <div class="beginBtn">
             <a href="~/Home/About" class="btn-2 zoom" type="button" id="button"> <span id="create"> ADD</span> item&raquo;</a>
         </div>

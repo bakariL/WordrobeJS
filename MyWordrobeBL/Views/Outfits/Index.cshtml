@@ -20,17 +20,31 @@
 
     </div>
 </div>
+<!--text and button changes on mouse over-->
 <div class="row" style="display:flex;" id="btnF" onclick="Swap('btnF', 'formM')">
     <button class="btn" onmouseover="overBtn(this)" onmouseout="outBtn(this)">Review</button>
 </div>
-<div class="row" style="display:none;" id="formM">
-    Write Review<br>
-    <textarea id="TextArea">
-    </textarea>
-    <button type="button" class="btn" onmouseover="overBtn(this)" onmouseout="outBtn(this)"  onclick="Review()">Submit</button>
+<!--Add element to an array and search and delete and element -->
+<div class="col-6-md">
+    <input type="text" name="txt" id="txt" />
+    <button type="button" onclick="addElement()">Add</button>
+    <button type="button" onclick="searchandDelete()">Delete</button>
+
+    <p id="pgh"></p>
 
 </div>
-<p id="rev"></p>
+<!--add content to a site....write a review-->
+<div class="row" style="display:none;" id="formM">
+    <div class="col-6-md">
+        Write Review<br>
+        <textarea id="TextArea">
+    </textarea>
+        <button type="button" class="btn" onmouseover="overBtn(this)" onmouseout="outBtn(this)" onclick="Review()">Submit</button>
+        <p id="rev"></p>
+    </div>
+
+</div>
+
 
 
 <br />

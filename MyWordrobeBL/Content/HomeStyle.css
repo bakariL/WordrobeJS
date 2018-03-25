@@ -142,9 +142,8 @@ form{
     padding-top: 2em;
 }
 
-.loginSignupRow {
-
-    margin-right: 4em;
+.loginBlock {
+    margin-right: 15em;
 }
 
 
@@ -154,8 +153,10 @@ form{
     padding-right: 5em;
     padding-top: 1em;
 }
-
-
+.sr{
+    margin-top: 2em;
+    padding-left: 11em;
+} 
 
 .LoginSignUp {
     float: right;
@@ -163,3 +164,4 @@ form{
     padding-bottom: 1em;
     padding-right: 5em;
 }
+

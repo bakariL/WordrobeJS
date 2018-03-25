@@ -1,20 +1,30 @@
 ﻿/*
     Home page:
-    There is a Search() function. This should allow user to type on the type of clothing item they want to search. For example
+    There is a Search() function. This should allow user to type on the type of clothing item they want to search. For example.
     if one wanted to see all Shoes, type in 'Shoes' in the search bar.//only works from layout view right now...
 
     There is also a login function on the home page. 
     When user clicks the login button, the function should swap out divs and replace it with the login in form. 
     once user enters email and password, the function should then display "Welcome, Name".
 
-    the nav bar is located on the bottom of the page
+    the nav bar is located on the bottom of the page.
 
-    "Click me" redirects user with a prompt informing them they are going to another page. this opens up new link in a new tab
+    "Click me" redirects user with a prompt informing them they are going to another page. this opens up new link in a new tab.
 
-
-    Outfits:
+    Outfits page:
     There is a "Review" button at the top of the page. When user hovers over it will change colors and when the mouse is off of it, it changes the color back. 
     When you click this button, a textarea appears for the user to write a review about there outfits. 
     When you click submit, whatever was entered in the text area will appear. 
 
+    You can also rank your top 3 favorite outfits, adding to an array and being able to delete what you've added. 
+    User can also add and delete by making their our favorite. 
+
+    Shoes page:
+    Search bar...using filter. also added validation css to the search box.
+
+    Tops page:
+    example of my drag hw assignment
+
+    Footer:
+    mouse over and it should change to created by Bakari Lewis
 */
