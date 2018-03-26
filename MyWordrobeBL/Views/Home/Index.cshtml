@@ -1,67 +1,90 @@
 ﻿<link href="~/Content/HomeStyle.css" rel="stylesheet" />
 <script src="~/Scripts/HomeMain.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">
 @{
     ViewBag.Title = "Home Page";
 }
 
-<!--login in sign up words here...top of page-->
-<div class="row LoginSignUp" id="firstLoginSignUp">
-    <div class="col-md-12">
-        <p id="sgnuplogn"><button onmouseover="mouseon(this)" onmouseout="mouseoff(this)" onclick="Swap('firstLoginSignUp','loginForm')"> Login</button> </p>
-    </div>
-</div>
-
-<!--first hidden...login form...email and pw required....-->
-<div class="row loginSignupRow" style="display: none" id="loginForm">
-    <div class="col-md-8"></div>
-    <div class="col-md-4 loginBlock">
-        <form action="/action_page.php">
-            <input type="email" name="email" value="email">
-            <input type="password" name="password" value="password">
-            <br><br>
-            <button type="button" class="btn" onclick="DisplayUser('loginForm', 'LoggedIn')">Submit</button>
-        </form>
-    </div>
-</div>
-
-<!--after user enters info...LOGGED IN STATUS..show users name or email while logged in, adding content switching divs-->
-<div class="row" id="LoggedIn" style="display:none;">
-    <div class="col-md-12">
-        <p id="loginName"></p>
-    </div>
-</div>
-<div class="row loginSignupRow" style="display: none" id="signUpForm">
-</div>
-
-<div class="row">
-    <div class="topHead">
-        <!--Header-->
-        <h1>My Wordrobe </h1>
-        <h3>Your virtual closest</h3>
-        <p>Create, Update, and See your wordrobe!</p>
-        <!--redirect section to another tab-->
-        <p><a href="https://www.uniqlo.com" target="_blank" onclick="Redirect();">Click here</a> to check out more sites </p>
-    </div>
-</div>
-
-<div class="row">
-    <!--go to outfits index page-->
-    <div class="col-lg-4">
-        <div class="beginBtn">
-            <a href="~/Outfits/Create" class="btn-2 zoom" type="button" id="button"> <span id="create">Create </span> Outfit&raquo;</a>
+<!--body tag here-->
+<body>
+    <!--Nav bar, white background-->
+    <div class="nav navbar-brand backNavBar">
+        <!--logo top right corner-->
+        <div class="col-lg-4 col-md-4 col-sm-12 logo">
+            <p id="myLogo">My Wordbrode</p>
+        </div>
+        <!--nav links Home, About, Sign in-->
+        <div class="col-lg-4 col-md-4 col-sm-12"></div>
+        <!--nav links on right right side Home, About, Sign in. with one link beiing the Sign In link. -->
+        <div class="col-lg-4 col-md-4 col-sm-12 navItemsDiv">
+            <ul id="navListID">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a onclick="SignIN();">Sign In</a></li>
+            </ul>
         </div>
     </div>
-    <div class="col-lg-4 sr">
-        <!--Search Box-->
-        <h4><strong>Search</strong> for Tops, Bottoms, Shoes</h4>
-        <input type="text" name="txt" id="txt" />
-        <button onclick="Search();">Search</button>
-        <p id="pgh"></p>
-    </div>
-    <div class="col-lg-4">
-         <!--go to add item page, i just have it under the about page didnt update the name-->
-        <div class="beginBtn">
-            <a href="~/Home/About" class="btn-2 zoom" type="button" id="button"> <span id="create"> ADD</span> item&raquo;</a>
+        <!--Main section one includes: sign up form on right and desciption text on the left, darker backgound with white form and text-->
+    <div class="row mainOne">
+        <div class="col-lg-6 col-md-6 col-sm-12 jbtn">
+            <!--jumbtron text despecrtion on left side -->
+            <div class="jumbotron">
+                <h1>Keep track of your wordbrode!</h1>
+                <h4>Manage all of your clothes here. Build your outfits.<br /> Keep track all in one.</h4>
+            </div>
         </div>
-    </div>
-</div>
+        <div class="col-lg-6 col-md-6 col-sm-12 frm">
+            <!--white background form on the right side..Sign up form top of site-->
+            <div class="card formCard">
+                <div id="topHeaderCard">
+                    <h3>Sign up to begin to style yourself! </h3>
+                </div>
+                <div class="row h">
+                    <div class="col-md-6">
+                        <p id="f"><strong>first name</strong></p>
+                    </div>
+                    <div class="col-md-6">
+                        <p id="l"><strong>last name</strong> </p>
+                    </div>
+                </div>
+                <div class="form-group form-inline a">
+                    <label for="FirstName"></label>
+                    <input type="text" class="form-control" id="FirstName" placeholder="first name" required maxlength="20" size="40" />
+
+                    <label for="LastName"></label>
+                    <input type="text" class="form-control" id="LastName" placeholder="last name" required maxlength="30" size="40" />
+                </div>
+
+                <div class="row h">
+                    <div class="col-md-6">
+                        <p id="e"><strong>email</strong></p>
+                    </div>
+                    <div class="col-md-6">
+                        <p id="L"><strong> password</strong></p>
+                    </div>
+                </div>
+                <div class="form-group form-inline">
+                    <label for="Email"></label>
+                    <input type="email" class="form-control" id="email" placeholder="email address" required maxlength="40" size="40" />
+
+                    <label for="Password"></label>
+                    <input type="password" class="form-control" id="password" placeholder="password" required maxlength="15" size="40" />
+                </div>
+                <hr />
+                <button type="submit" class="btn btn-primary btn-lg btn-block">Sign up for free</button>
+                <div class="terms">
+                    <p>You are agreeing to our<a> Terms and Services</a></p>
+                </div>
+
+
+            </div>
+        </div>
+        </div>
+        <!--About section #About one page scroll. parallax feel.-->
+        <!--header and sub header-->
+        <!--3 divs/cards on 3 things people will get from the application or the three steps with images-->
+        <!--Footer: includes copyright. made with love in Cleveland. contact us link to form.-->
+        <!--copyright-->
+        <!--made with love in ____(on mouse over) Cleveland.-->
+        <!-- Contact us link or just an email address for now...-->
+</body>
